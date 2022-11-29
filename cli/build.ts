@@ -1,3 +1,6 @@
+import * as Compiler from '../compiler'
+import * as Paths from './utils/paths'
+
 export default async () => {
-  console.log('build')
+  await Compiler.build(Paths)
 }
