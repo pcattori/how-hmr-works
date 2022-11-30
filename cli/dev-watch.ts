@@ -6,7 +6,7 @@ import * as Paths from './utils/paths'
 let PORT = 3001
 
 export default async () => {
-  await Compiler.watch(Paths)
+  await Compiler.watch(Paths, { mode: 'dev:watch' })
 
   let app = express()
   app.use('/', express.static(Paths.distDir))
